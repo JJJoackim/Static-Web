@@ -1,0 +1,447 @@
+/* General Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Remove height from body */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdyYXkgbmF0dXJhbCUyMGJsdXUlMjB3aGl0ZXxlbnwwfHx8fDE2OTY5NTQ1NzE&ixlib=rb-4.0.3&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; 
+    color: #FF914D; 
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+}
+
+.header-left {
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 250px;
+    padding: 8px;
+    border: 2px solid #FF914D;
+    border-radius: 30px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: #ffffff;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; 
+    color: #FF914D;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s;
+
+}
+
+nav ul li a:hover {
+    color: #FFCD4B;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Cart Icon */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #FF914D;
+    padding: 10px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.cart-icon a {
+    text-decoration: none;
+}
+
+.cart-icon:hover {
+    color: #FFCD4B;
+}
+
+/*the login page, buttons etc. */
+body {
+    font-family: Poppins, sans-serif;
+    background-image: url();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF914D;
+}
+
+.input-group {
+    margin-bottom: 15px;
+
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #FF914D;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #FF914D;
+    border-radius: 5px;
+}
+
+.input-group input[type="submit"] {
+    background-color: #FF914D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.input-group input[type="submit"]:hover {
+    background-color: #FFCD4B;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+
+.extra-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.extra-links a {
+    color: #FF914D;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.extra-links p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Hide hamburger menu by default */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FF914D;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Sidebar Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -250px; 
+        background-color: #ffffff;
+        transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        padding: 20px 60px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+
+    /* Show sidebar when active */
+    header.active {
+        left: 0; /* show sidebar */
+    }
+
+    /* Menu toggle button */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    
+    /* The title "JJJoackim" */
+    .site-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #f58220;
+        margin-bottom: 0px;
+    }
+    
+    
+
+    /* Header sections: align content in a column */
+    .header-left, .header-center, .header-right, nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Navigation styling */
+    nav ul {
+        flex-direction: flex-start;
+        width: 100%;
+    }
+
+    /* Products menu item */
+    nav ul li.products {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    nav ul li.products > * {
+        margin-right: 8px;
+    }
+
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    
+    .dropdown-menu li {
+        width: auto;
+        display: inline-block;
+    }
+    
+    .dropdown-menu li a {
+        white-space: nowrap;
+        padding: 6px 10px;
+        background-color: #fff;
+        border: 1px solid #f58220;
+        border-radius: 6px;
+        color: #f58220;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    /* Show dropdown when Products is active */
+    .dropdown-menu li .dropdown-menu,
+    .dropdown-menu li a  {
+        display: flex;
+    }
+    
+
+    /* Optional: little down arrow after "Products" text */
+    nav ul li.products > a::after {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    /* Main content, categories, about, footer */
+    main, .categories, .about, .todoist-ui, footer {
+        margin-left: 0;
+    }
+
+/* Styling for search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;                /* Full width of sidebar */
+    padding: 0 10px;            /* Add horizontal spacing inside */
+    box-sizing: border-box;     /* Ensures padding doesn't overflow */
+    position: relative;
+}
+
+/* Search input styling */
+.search-input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    outline: none;
+}
+
+
+    /* Search button styling */
+    .search-button {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: orange;
+        cursor: pointer;
+    }
+}
+
+  /* ===========================
+   Footer
+=========================== */
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: white;
+    color: #2C2C2C;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+footer .brands a {
+    margin: 0 10px;
+    padding: 8px 16px;
+    color: #ff7f50;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer .brands a:hover {
+    background-color: #ff7f50;
+    color: white;
+}
+
+.login-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 9999;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup-content h3 {
+    color: #3b0a45;
+    margin-bottom: 15px;
+}
+
+.checkmark {
+    font-size: 40px;
+    color: #59ff96;
+}
