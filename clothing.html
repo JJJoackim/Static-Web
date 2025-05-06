@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/clothing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>JJJoackim</title>
+</head>
+<body>
+    <div class="header-container">
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+        <div class="site-title">JJJoackim</div>
+    </div>
+    
+    <header>
+        <div class="header-left">
+            <div class="logo">JJJoackim</div>
+        </div>
+    
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Products </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="clothing.html">Clothing</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="selfcare.html">Self Care</a></li>
+                            <li><a href="books.html">Books</a></li>
+                            <li><a href="gaming.html">Gaming</a></li>
+                            <li><a href="cycling.html">Cycling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="myportfolio.html">My Portfolio</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="header-right" style="display: flex; align-items: center; gap: 20px; position: relative;">
+
+            <div class="search-wrapper" style="position: relative; display: flex; flex-direction: column; align-items: flex-end;">
+                <div class="search-container" style="position: relative;">
+                    <input type="text" class="search-input" placeholder="Search..." style="padding-right: 70px; width: 250px;">
+                    <button class="search-button" style="position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">🔍</button>
+                    <button class="clear-button" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">❌</button>
+                </div>
+        
+                <!-- no results message -->
+                <div id="no-results-message" style="position: absolute; top: 110%; left: 0; width: 100%; display: none; font-size: 0.9em; color: #FF914D; text-align: left; background-color: white; font-family: 'Poppins''sans-serif';">
+                    No results found matching your search...
+                </div>
+            </div>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <p>Home > Clothing</p>
+    </div>
+    
+    <div class="filters">
+        <div class="filter-options">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="Jackets">Jackets</option>
+            <option value="Dresses">Dresses</option>
+            <option value="Formal Wear">Formal Wear</option>
+            <option value="Casual Wear">Casual Wear</option>
+          </select>
+      
+          <label for="price">Price Range:</label>
+          <select id="price">
+            <option value="all">All</option>
+            <option value="0-25">Under $25</option>
+            <option value="25-50">$25 - $50</option>
+            <option value="50-100">$50 - $100</option>
+            <option value="100-1000">Above $100</option>
+          </select>
+        </div>
+      </div>
+      
+    
+    
+<!-- Product Section -->
+<div class="product-grid">
+
+    <div class="product" data-category="Jackets" data-price="60" data-product-id="1">
+      <img src="images/IMG_20220911_151257.jpg" alt="Red Blazer">
+      <h3>Red Blazer</h3>
+      <div class="rating" data-product-id="1">★★★★★</div>
+      <p class="price">$60</p>
+      <button type="button" data-product-id="1" data-product-name="Red Blazer" data-product-price="60" onclick="addToCartAndRedirect(event, this)">Add to Cart</button>
+    </div>
+  
+    <div class="product" data-category="Dresses" data-price="80" data-product-id="2">
+      <img src="images/IMG_20220912_103436.jpg" alt="Black Embellished Dress">
+      <h3>Black Embellished Dress</h3>
+      <div class="rating" data-product-id="2">★★★★★</div>
+      <p class="price">$80</p>
+      <button type="button" data-product-id="2" data-product-name="Black Embellished Dress" data-product-price="80" onclick="addToCartAndRedirect(event, this)">Add to Cart</button>
+    </div>
+  
+    <div class="product" data-category="Casual Wear" data-price="45" data-product-id="3">
+      <img src="images/IMG_20220908_163042.jpg" alt="Casual Jacket">
+      <h3>Casual Jacket</h3>
+      <div class="rating" data-product-id="3">★★★★★</div>
+      <p class="price">$45</p>
+      <button type="button" data-product-id="3" data-product-name="Casual Jacket" data-product-price="45" onclick="addToCartAndRedirect(event, this)">Add to Cart</button>
+    </div>
+  
+    <div class="product" data-category="Jackets" data-price="35" data-product-id="4">
+      <img src="images/IMG_20220910_214226.jpg" alt="Harley Davidson Jacket">
+      <h3>Harley Davidson Jacket</h3>
+      <div class="rating" data-product-id="4">★★★★★</div>
+      <p class="price">$35</p>
+      <button type="button" data-product-id="4" data-product-name="Harley Davidson Jacket" data-product-price="35" onclick="addToCartAndRedirect(event, this)">Add to Cart</button>
+    </div>
+  
+  </div>
+  
+<!-- Footer -->
+<footer>
+    <p>Trusted by teams at:</p>
+    <div class="brands">
+        <a href="https://beribybenji.com/?srsltid=AfmBOoo2WogIRcO5DzdFJO5ejn2V5M38XZxyHW4y87eqzm-luaktMhfs" target="_blank">Beri</a>
+        <a href="https://shopee.com" target="_blank">Shopee</a>
+        <a href="https://facebook.com/marketplace" target="_blank">Facebook Marketplace</a>
+        <a href="https://lazada.com" target="_blank">Lazada</a>
+    </div>
+</footer>
+  
+      
+    
+    <script src="javascript/clothing.js"></script>
+    <script src="javascript/cart.js"></script>
+
+</body>
+</html>

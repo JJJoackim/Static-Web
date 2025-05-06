@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gaming.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>JJJoackim</title>
+</head>
+<body>
+    <div class="header-container">
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+        <div class="site-title">JJJoackim</div>
+    </div>
+    
+    <header>
+        <div class="header-left">
+            <div class="logo">JJJoackim</div>
+        </div>
+    
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Products </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="clothing.html">Clothing</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="selfcare.html">Self Care</a></li>
+                            <li><a href="books.html">Books</a></li>
+                            <li><a href="gaming.html">Gaming</a></li>
+                            <li><a href="cycling.html">Cycling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="myportfolio.html">My Portfolio</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="header-right" style="display: flex; align-items: center; gap: 20px; position: relative;">
+
+            <div class="search-wrapper" style="position: relative; display: flex; flex-direction: column; align-items: flex-end;">
+                <div class="search-container" style="position: relative;">
+                    <input type="text" class="search-input" placeholder="Search..." style="padding-right: 70px; width: 250px;">
+                    <button class="search-button" style="position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">🔍</button>
+                    <button class="clear-button" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">❌</button>
+                </div>
+        
+                <!-- no results message -->
+                <div id="no-results-message" style="position: absolute; top: 110%; left: 0; width: 100%; display: none; font-size: 0.9em; color: #FF914D; text-align: left; background-color: white; font-family: 'Poppins''sans-serif';">
+                    No results found matching your search...
+                </div>
+            </div>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <p>Home > Gaming</p>
+    </div>
+    
+    <div class="filters">
+        <div class="filter-options">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="console">Console</option>
+            <option value="game disc">Game Disc</option>
+            <option value="controller">Controller</option>
+          </select>
+      
+          <label for="price">Price Range:</label>
+          <select id="price">
+            <option value="all">All</option>
+            <option value="0-50">Under $50</option>
+            <option value="50-80">$50 - $80</option>
+            <option value="80-100">$80 - $100</option>
+            <option value="100-1000">Above $100</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="product-grid animation-container">
+
+        <div class="product" data-category="console" data-price="89" data-product-id="301">
+          <img src="images/Sony Playstation - PS5.jpg" alt="PS5">
+          <h3>PS5</h3>
+          <div class="rating" data-product-id="301">★★★★★</div>
+          <p class="price">$89</p>
+          <button type="button"
+                  data-product-id="301"
+                  data-product-name="PS5"
+                  data-product-price="89"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="console" data-price="75" data-product-id="302">
+          <img src="images/Brand new PS5 available with all accessories intact Brand new Xbox series x Contact_ 8313164207.jpg" alt="Xbox Series X">
+          <h3>Xbox Series X</h3>
+          <div class="rating" data-product-id="302">★★★★★</div>
+          <p class="price">$75</p>
+          <button type="button"
+                  data-product-id="302"
+                  data-product-name="Xbox Series X"
+                  data-product-price="75"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="game disc" data-price="99" data-product-id="303">
+          <img src="images/horizon.jpg" alt="Horizon Forbidden West">
+          <h3>Horizon Forbidden West</h3>
+          <div class="rating" data-product-id="303">★★★★★</div>
+          <p class="price">$99</p>
+          <button type="button"
+                  data-product-id="303"
+                  data-product-name="Horizon Forbidden West"
+                  data-product-price="99"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="controller" data-price="69" data-product-id="304">
+          <img src="images/Manette Dualsense edge Officielle playstation.jpg" alt="PS5 Dualsense Controller">
+          <h3>PS5 Dualsense Controller</h3>
+          <div class="rating" data-product-id="304">★★★★★</div>
+          <p class="price">$69</p>
+          <button type="button"
+                  data-product-id="304"
+                  data-product-name="PS5 Dualsense Controller"
+                  data-product-price="69"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+      </div>
+      
+      <!-- Footer -->
+<footer>
+  <p>Trusted by teams at:</p>
+  <div class="brands">
+      <a href="https://beribybenji.com/?srsltid=AfmBOoo2WogIRcO5DzdFJO5ejn2V5M38XZxyHW4y87eqzm-luaktMhfs" target="_blank">Beri</a>
+      <a href="https://shopee.com" target="_blank">Shopee</a>
+      <a href="https://facebook.com/marketplace" target="_blank">Facebook Marketplace</a>
+      <a href="https://lazada.com" target="_blank">Lazada</a>
+  </div>
+</footer>
+    
+    <script src="javascript/gaming.js"></script>
+    <script src="javascript/cart.js"></script>
+
+</body>
+</html>

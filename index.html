@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>JJJoackim</title>
+</head>
+<body>
+
+<div class="header-container">
+    <button class="menu-toggle" id="menu-toggle">
+        ☰
+    </button>
+    <div class="site-title">JJJoackim</div>
+</div>
+    
+
+<!-- Top Section with Background Slideshow -->
+<div class="top-section">
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="images/BERI.png" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/2.png" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.png" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/4.png" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="images/5.png" alt="Image 5">
+            </div>
+            <div class="carousel-item">
+                <img src="images/BERI (1).png" alt="Image 5">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+
+<header>
+    <div class="header-left" style="position: relative;">
+        <canvas id="particles-left"></canvas> <!-- ✨ New Left Particle Canvas -->
+        <div class="logo">JJJoackim</div>
+    </div>
+
+    <div class="header-center">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown products">
+                    <a href="index.html">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="clothing.html">Clothing</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="selfcare.html">Self Care</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="cycling.html">Cycling</a></li>
+                    </ul>
+                </li>
+                <li><a href="myportfolio.html">My Portfolio</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-right" style="display: flex; align-items: center; gap: 20px; position: relative;">
+        <div class="search-wrapper" style="position: relative; display: flex; flex-direction: column; align-items: flex-end;">
+            <div class="search-container" style="position: relative;">
+                <input type="text" class="search-input" placeholder="Search..." style="padding-right: 70px; width: 250px;">
+                <button class="search-button" style="position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">🔍</button>
+                <button class="clear-button" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">❌</button>
+            </div>
+    
+            <!-- no results message -->
+            <div id="no-results-message" style="position: absolute; top: 110%; left: 0; width: 100%; display: none; font-size: 0.9em; color: #FF914D; text-align: left; background-color: white; font-family: 'Poppins''sans-serif';">
+                No results found matching your search...
+            </div>
+        </div>
+    
+        <a href="cart.html" class="cart-icon" style="font-size: 22px;">
+            <i class="fas fa-shopping-cart"></i>        
+        </a>
+    
+    </div>
+
+</header>
+
+
+
+<main>
+    <!-- Center Animated Logo -->
+    <img src="images/JJJoackim-ezgif.com-video-to-gif-converter.gif" alt="Animated Logo" class="animated-logo">
+
+
+    <!-- Floating Icons Left and Right -->
+    <div class="floating-icons left-floating-icons">
+        <img src="images/cart icao.png" alt="Cart Icon" class="floating-icon">
+        <img src="images/booook.jpg" alt="Book Icon" class="floating-icon">
+        <img src="images/connnnn.png" alt="Game Icon" class="floating-icon">
+    </div>
+  
+    <div class="floating-icons right-floating-icons">
+        <img src="images/cart icao.png" alt="Cart Icon" class="floating-icon">
+        <img src="images/booook.jpg" alt="Book Icon" class="floating-icon">
+        <img src="images/connnnn.png" alt="Game Icon" class="floating-icon">
+    </div>
+
+    <div class="empty-space-left">
+        <h3>Empowering Dreams.</h3>
+        <p>Where creativity meets commerce.</p>
+    </div>
+
+    <div class="empty-space-right">
+        <h4>Trusted by:</h4>
+        <div class="partner-logos">
+            <img src="images/shopppeee.png" alt="Shopee">
+            <img src="images/lazada dds.jpg" alt="Lazada">
+            <img src="images/beriii.png" alt="Facebook Marketplace">
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video width="900" height="500" autoplay loop muted>
+            <source src="images/JJJoackim (1).mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="hero-carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track">
+            <img src="images/I.png" alt="Product 1" class="product-carousel-item">
+            <img src="images/II.png" alt="Product 2" class="product-carousel-item">
+            <img src="images/III.png" alt="Product 3" class="product-carousel-item">
+            <img src="images/IV.png" alt="Product 4" class="product-carousel-item">
+          </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      
+</main>
+
+
+
+<section class="categories">
+    <h2>Top Selling Categories</h2>
+
+    <div class="category-grid">
+
+        <a href="clothing.html" class="category">
+            <div class="category">
+                <img src="images/IMG_20220908_163042.jpg" alt="Clothing">
+                <span>Clothing</span>
+            </div>
+        </a>
+
+        <a href="courses.html" class="category">
+            <div class="category">
+                <img src="images/attachment_123360235.png" alt="Courses">
+                <span>Courses</span>
+            </div>
+        </a>
+
+        <a href="selfcare.html" class="category">
+            <div class="category">
+                <img src="images/Capture.PNG" alt="Self Care">
+                <span>Self Care</span>
+            </div>
+        </a>
+
+        <a href="books.html" class="category">
+            <div class="category">
+                <img src="images/b1.jpg" alt="Books">
+                <span>Books</span>
+            </div>
+        </a>
+
+        <a href="gaming.html" class="category">
+            <div class="category">
+                <img src="images/IMG_20220918_130450.jpg" alt="Gaming">
+                <span>Gaming</span>
+            </div>
+        </a>
+
+        <a href="cycling.html" class="category">
+            <div class="category">
+                <img src="images/IMG_20220813_100833.jpg" alt="Cycling">
+                <span>Cycling</span>
+            </div>
+        </a>
+
+    </div> 
+</section>
+
+
+<!-- Welcome to JJJoackim -->
+<section class="about">
+    <div class="container">
+        <h1>Welcome to <span>JJJoackim</span></h1>
+        <p class="tagline">Empowering businesses & individuals with technology, e-commerce, and innovation.</p>
+
+        <div class="content">
+            <div class="business">
+                <h2>The Business</h2>
+                <p>JJJoackim is an innovative digital platform that merges technology, e-commerce, and content creation. We offer a curated marketplace of high-quality tech gadgets, fashion, and lifestyle products.</p>
+            </div>
+            <div class="influencer">
+                <h2>The Influencer</h2>
+                <p>As an entrepreneur, content creator, and digital innovator, <strong>Joachim Bagul-lo</strong> shares his expertise in business, technology, and marketing. Passionate about AI and productivity, he creates valuable content that educates and inspires individuals and businesses alike.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section class="todoist-ui">
+    <div class="todoist-ui-content">
+        <h2>About Me</h2>
+        <p>Capture tasks at the speed of thought</p>
+        <p>
+            Hi! I’m Joachim Bagul-lo – a Filipino entrepreneur, content creator, and enthusiastic go-getter. Most people know me as JJJoackim, and here’s the story behind that catchy name:
+
+            It’s all about family! My sister’s name starts with J, my brother’s name starts with J, and even my mom’s name starts with J. The only one missing the J vibe? My dad – his name starts with F (no hard feelings, Papa!).
+
+            So, I mashed up the Js from my family crew and added a playful twist to create JJJoackim. It’s a nod to my roots and a fun way to stand out.
+            Enjoy shopping, and let’s connect!
+        </p>
+    </div>
+    <img src="images/IMG_20221001_164108.jpg" alt="Todoist UI Preview">
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Trusted by teams at:</p>
+    <div class="brands">
+        <a href="https://beribybenji.com/?srsltid=AfmBOoo2WogIRcO5DzdFJO5ejn2V5M38XZxyHW4y87eqzm-luaktMhfs" target="_blank">Beri</a>
+        <a href="https://shopee.com" target="_blank">Shopee</a>
+        <a href="https://facebook.com/marketplace" target="_blank">Facebook Marketplace</a>
+        <a href="https://lazada.com" target="_blank">Lazada</a>
+    </div>
+</footer>
+
+
+<script src="index.js"></script>
+<script src="javascript/cart.js"></script>
+<script src="javascript/books.js"></script>
+<script src="javascript/gaming.js"></script>
+<script src="javascript/clothing.js"></script>
+<script src="javascript/selfcare.js"></script>
+<script src="javascript/courses.js"></script>
+<script src="javascript/cycling.js"></script>
+<script src="javascript/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/selfcare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>JJJoackim</title>
+</head>
+<body>
+    <div class="header-container">
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+        <div class="site-title">JJJoackim</div>
+    </div>
+    
+    <header>
+        <div class="header-left">
+            <div class="logo">JJJoackim</div>
+        </div>
+    
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Products </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="clothing.html">Clothing</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="selfcare.html">Self Care</a></li>
+                            <li><a href="books.html">Books</a></li>
+                            <li><a href="gaming.html">Gaming</a></li>
+                            <li><a href="cycling.html">Cycling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="myportfolio.html">My Portfolio</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-right" style="display: flex; align-items: center; gap: 20px; position: relative;">
+
+          <div class="search-wrapper" style="position: relative; display: flex; flex-direction: column; align-items: flex-end;">
+              <div class="search-container" style="position: relative;">
+                  <input type="text" class="search-input" placeholder="Search..." style="padding-right: 70px; width: 250px;">
+                  <button class="search-button" style="position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">🔍</button>
+                  <button class="clear-button" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; cursor: pointer;">❌</button>
+              </div>
+      
+              <!-- no results message -->
+              <div id="no-results-message" style="position: absolute; top: 110%; left: 0; width: 100%; display: none; font-size: 0.9em; color: #FF914D; text-align: left; background-color: white; font-family: 'Poppins''sans-serif';">
+                  No results found matching your search...
+              </div>
+          </div>
+          <a href="cart.html" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </a>
+      </div>
+    </header>
+
+    <div class="breadcrumbs">
+      <p>Home > Self-Care</p>
+  </div>
+
+    <div class="filters">
+        <div class="filter-options">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="skincare">Skincare</option>
+            <option value="haircare">Haircare</option>
+            <option value="wellness">Wellness</option>
+            <option value="fitness">Fitness</option>
+          </select>
+      
+          <label for="price">Price Range:</label>
+          <select id="price">
+            <option value="all">All</option>
+            <option value="0-25">Under $25</option>
+            <option value="25-50">$25 - $50</option>
+            <option value="50-1000">Above $50</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="product-grid">
+
+        <div class="product" data-category="skincare" data-price="25" data-product-id="401">
+          <img src="images/Amazon Listing Images _ A Content _ EBC - Meteor Design.jpg" alt="Skincare Set">
+          <h3>Skincare Set</h3>
+          <div class="rating" data-product-id="401">★★★★★</div>
+          <p class="price">$25</p>
+          <button type="button"
+                  data-product-id="401"
+                  data-product-name="Skincare Set"
+                  data-product-price="25"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="haircare" data-price="30" data-product-id="402">
+          <img src="images/Curly and Natural Hair Care Products _ PATTERN Beauty.jpg" alt="Haircare Kit">
+          <h3>Haircare Kit</h3>
+          <div class="rating" data-product-id="402">★★★★★</div>
+          <p class="price">$30</p>
+          <button type="button"
+                  data-product-id="402"
+                  data-product-name="Haircare Kit"
+                  data-product-price="30"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="wellness" data-price="20" data-product-id="403">
+          <img src="images/Sleep Aromatherapy Candles _ Sleep Aid Candle Gift Set _ Essential Oils _ Toxin Free _ Plastic Free Luxury Premium Candles _ Handmade UK - Etsy UK.jpg" alt="Aromatherapy Set">
+          <h3>Aromatherapy Set</h3>
+          <div class="rating" data-product-id="403">★★★★★</div>
+          <p class="price">$20</p>
+          <button type="button"
+                  data-product-id="403"
+                  data-product-name="Aromatherapy Set"
+                  data-product-price="20"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="fitness" data-price="18" data-product-id="404">
+          <img src="images/Yoga Mat.jpg" alt="Yoga Mat">
+          <h3>Yoga Mat</h3>
+          <div class="rating" data-product-id="404">★★★★★</div>
+          <p class="price">$18</p>
+          <button type="button"
+                  data-product-id="404"
+                  data-product-name="Yoga Mat"
+                  data-product-price="18"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+        <div class="product" data-category="fitness" data-price="20" data-product-id="405">
+          <img src="images/Capture.PNG" alt="Beri">
+          <h3>beribybenji</h3>
+          <div class="rating" data-product-id="405">★★★★★</div>
+          <p class="price">$20</p>
+          <button type="button"
+                  data-product-id="405"
+                  data-product-name="beribybenji"
+                  data-product-price="20"
+                  onclick="addToCartAndRedirect(event, this)">
+            Buy Now
+          </button>
+        </div>
+      
+      </div>
+      
+      <!-- Footer -->
+<footer>
+    <p>Trusted by teams at:</p>
+    <div class="brands">
+        <a href="https://beribybenji.com/?srsltid=AfmBOoo2WogIRcO5DzdFJO5ejn2V5M38XZxyHW4y87eqzm-luaktMhfs" target="_blank">Beri</a>
+        <a href="https://shopee.com" target="_blank">Shopee</a>
+        <a href="https://facebook.com/marketplace" target="_blank">Facebook Marketplace</a>
+        <a href="https://lazada.com" target="_blank">Lazada</a>
+    </div>
+</footer>
+      
+    
+    <script src="javascript/selfcare.js"></script>
+    <script src="javascript/cart.js"></script>
+</body>
+</html>
